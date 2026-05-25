@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Presupuesto | MalinoisK9</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
 
-        <header class="header">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-            <div class="logo">
-                <img src="../images/logok9.png" alt="Logo MalinoisK9">
-            </div>
+<header>
 
-            <nav class="menu">
-                 <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Entrenamiento</a></li>
-                    <li><a href="presupuesto.html"class="active">Presupuesto</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+    <h1>Solicita tu presupuesto</h1>
 
-        </header>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="presupuesto.html">Presupuesto</a>
+    </nav>
 
-        <h1>Solicitar presupuesto</h1>
+</header>
 
-        <form id="formulario">
+<section>
 
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
+<form id="formulario">
 
-            <select required>
-                <option value="">Tipo de entrenamiento</option>
-                <option>Básico</option>
-                <option>Avanzado</option>
-                <option>Protección</option>
-            </select>
+    <h2>Datos de contacto</h2>
 
-            <input type="number" placeholder="Días" min="1" required>
+    <label>Nombre</label>
+    <input type="text" id="nombre" required>
 
-            <label class="checkbox">
-                <input type="checkbox" id="privacidad" required> Acepto la política de privacidad
-            </label>
+    <label>Apellidos</label>
+    <input type="text" id="apellidos" required>
 
-            <button type="submit">Enviar</button>
+    <label>Teléfono</label>
+    <input type="text" id="telefono" required>
 
-        </form>
+    <label>Email</label>
+    <input type="email" id="email" required>
 
-        <p id="mensaje-exito">Sus datos han sido enviados correctamente</p>
+    <h2>Presupuesto del viaje</h2>
 
-        <script>
-            document.getElementById("formulario").addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.getElementById("mensaje-exito").style.display = "block";
-            this.reset();
-            });
-        </script>
+    <label>Destino</label>
 
-        <!-- PIE DE PAGINA -->
-        <footer class="footer">
+    <select id="producto">
+        <option value="1200">Tokio - 1200€</option>
+        <option value="1500">Kioto - 1500€</option>
+        <option value="2000">Ruta completa Japón - 2000€</option>
+    </select>
 
-           <!-- REDES SOCIALES -->
-           <div class="redes">
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-           </div>
+    <label>Días del viaje</label>
+    <input type="number" id="plazo" min="1" max="30">
 
-            <!-- DIRECCIÓN -->
-            <p> Sevilla, España</p>
+    <h2>Extras</h2>
 
-            <!-- AVISO LEGAL -->
-            <a href="https://www.conprueba.es/aviso-legal" target="_blank" >
-            Aviso legal
-            </a>
-        </footer>
-    </body>
+    <label>
+        <input type="checkbox" class="extra" value="200">
+        Hotel Premium (+200€)
+    </label>
+
+    <label>
+        <input type="checkbox" class="extra" value="100">
+        Seguro de viaje (+100€)
+    </label>
+
+    <label>
+        <input type="checkbox" class="extra" value="150">
+        Guía turístico (+150€)
+    </label>
+
+    <h2>Presupuesto final</h2>
+
+    <input type="text" id="presupuestoFinal" readonly>
+
+    <label>
+        <input type="checkbox" id="condiciones">
+        Acepto las condiciones de privacidad
+    </label>
+
+    <button type="submit">Enviar</button>
+
+    <button type="reset">Resetear</button>
+
+</form>
+
 </html>
