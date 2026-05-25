@@ -1,212 +1,71 @@
-/* CUERPO */
-body {
-    font-family: Georgia;
-    margin: 0;
-    background-color: #1C1C1C;
-    color: #F5F5F5;
+*{
+    gap:20px;
+    padding:40px;
 }
 
-/* HEADER FINO */
-.header {
-    background-color: #5C4033;
-    padding: 10px 0;
-    text-align: center;
+.galeria img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
 }
 
-/* MENÚ */
-.menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.galeria img:hover{
+    transform:scale(1.05);
 }
 
-.menu li {
-    display: inline;
-    margin: 0 15px;
+form{
+    background:white;
+    width:80%;
+    margin:auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-/* SUBRAYAR PAGINA DEL MENU EN LA QUE SE ENCUENTRA */
-.menu a.active {
-    color: #6B8E23;
-    border-bottom: 2px solid #6B8E23;
+label{
+    display:block;
+    margin-top:15px;
 }
 
-.menu a {
-    color: #D2B48C;
-    text-decoration: none;
+input,
+select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
 }
 
-.menu a:hover {
-    color: #6B8E23; /* VERDE */
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background-color:#cc0000;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
 }
 
-/* TÍTULOS */
-h1, h2 {
-    text-align: center;
+button:hover{
+    background-color:#990000;
 }
 
-/* PRODUCTO - IMAGEN ENTRENAMIENTO*/
-.titulo {
-    background-image: url("../images/entrenamientok9.png");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-
-    height: 600px; 
-    padding: 100px 20px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-
-    text-align: center;
-    color: white;
+#contenedorNoticias article{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
 }
 
-.bloque img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover; 
-    border-radius: 10px;
-}
+@media(max-width:768px){
 
-.bloque {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
-    gap: 15px;
-}
+    .cards{
+        grid-template-columns:1fr;
+    }
 
-.bloque .texto {
-    max-width: 600px;
-}
+    .galeria{
+        grid-template-columns:1fr;
+    }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    background-color: #5C4033;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* CONTACTO */
-.contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.mapa iframe {
-    width: 400px;
-    height: 300px;
-    border: none;
-}
-
-/* FORMULARIO */
-#formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; 
-}
-
-#formulario input,
-#formulario select,
-#formulario button {
-    width: 250px;
-    padding: 8px;
-}
-
-.checkbox {
-    display: flex;
-    align-items: center;
-    gap: 30px; 
-}
-
-/* MENSAJE CUANDO HAN SIDO ENVIADOS LOS DATOS */
-#mensaje-exito {
-    display: none;
-    color: green;
-    text-align: center;
-}
-/* HEADER - BARRA DEL MENU */
-.header {
-    position: relative;
-    background-color: #5C4033; /* MARRON */
-    padding: 30px 0;
-    text-align: center;
-}
-
-/* LOGO DEL MENU */
-.logo {
-    position: absolute;
-    left: 500px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* TAMAÑO DEL LOGO */
-.logo img {
-    height: 100px; 
-}
-
-/* PIE DE SECCION */
-.footer {
-    background-color: #5C4033; /* MARRON */
-    color: #F5F5F5;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
-
-/* RRSS DEL PIE DE SECCION */
-.redes {
-    margin-bottom: 10px;
-}
-
-.redes a {
-    margin: 0 10px;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-/* AVISO LEGAL DEL PIE DE SECCION */
-.footer a {
-    color: #D2B48C;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #6B8E23; /*VERDE*/
-}
-
-.secciontexto {
-    text-align: center;
-    color: #6B8E23;
-}
-
-/* TEXTO GENERAL*/
-.texto {
-    max-width: 800px; 
-    margin: 0 auto; 
-    line-height: 1.6; 
-    color: white;
-}
-
-/* LISTA ENTRENAMIENTO BASICO */
-.lista-basica {
-    list-style-type: circle; 
-    text-align: left; 
-    margin-top: 10px;
-    color: white;
+    form{
+        width:95%;
+    }
 }
