@@ -338,3 +338,10 @@ section h2 {
 
     transform: scale(1.05);
 }
+
+.active-image {
+
+    transform: scale(1.15);
+
+    border: 4px solid var(--rosa);
+}
