@@ -1,16 +1,16 @@
 [
     {
-        "titulo":"Nuevo vuelo directo a Tokio",
-        "texto":"Ya existen vuelos directos desde Madrid a Tokio."
+        "titulo": "Festival Sakura 2026",
+        "texto": "Descubre Japón durante la temporada de cerezos."
     },
 
     {
-        "titulo":"Festival de verano en Kioto",
-        "texto":"Miles de turistas visitan Japón durante el verano."
+        "titulo": "Nuevas rutas anime",
+        "texto": "Visita Akihabara y los lugares más famosos del anime."
     },
 
     {
-        "titulo":"Ofertas especiales 2026",
-        "texto":"Descuento del 20% para reservas anticipadas."
+        "titulo": "Viajes gastronómicos",
+        "texto": "Explora la cocina japonesa tradicional."
     }
 ]
