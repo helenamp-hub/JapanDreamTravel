@@ -287,3 +287,54 @@ section h2 {
 
     border-radius: 10px;
 }
+/* GALERIA */
+/* PAGE TITLE */
+
+.page-title {
+
+    padding-top: 150px;
+
+    text-align: center;
+}
+
+.page-title h1 {
+
+    font-size: 3rem;
+
+    color: var(--rojo);
+}
+
+/* GALERÍA */
+
+.gallery {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 50px;
+}
+
+.gallery img {
+
+    width: 300px;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.gallery img:hover {
+
+    transform: scale(1.05);
+}
