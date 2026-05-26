@@ -306,44 +306,94 @@ section h2 {
 
 /* GALERÍA */
 
+/* GALERÍA */
+
 .gallery {
 
-    display: flex;
+    display: grid;
 
-    flex-wrap: wrap;
-
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 20px;
 
     padding: 50px;
 }
 
+/* IMÁGENES */
+
 .gallery img {
 
-    width: 300px;
+    width: 100%;
 
-    height: 200px;
+    height: 250px;
 
     object-fit: cover;
 
-    border-radius: 15px;
-
-    transition: 0.3s;
+    border-radius: 20px;
 
     cursor: pointer;
+
+    transition: 0.4s;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* HOVER */
 
 .gallery img:hover {
 
-    transform: scale(1.05);
+    transform: scale(1.03);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.active-image {
+/* MODAL */
 
-    transform: scale(1.15);
+.modal {
 
-    border: 4px solid var(--rosa);
+    display: none;
+
+    position: fixed;
+
+    z-index: 2000;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGEN MODAL */
+
+.modal img {
+
+    max-width: 80%;
+
+    max-height: 80%;
+
+    border-radius: 20px;
+}
+
+/* BOTÓN CERRAR */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 30px;
+    right: 50px;
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
 }
 
 /* PRESUPUESTO */
