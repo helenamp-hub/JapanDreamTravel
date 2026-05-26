@@ -1,11 +1,22 @@
 // MENÚ ACTIVO AUTOMÁTICO, SE EJECUTA EN TODAS LAS PÁGINAS
 
-const links = document.querySelectorAll(".nav-link");
+const currentPage = window.location.pathname.split("/").pop();
 
-links.forEach(link => {
+const navLinks = document.querySelectorAll(".nav-link");
 
-    if(link.href === window.location.href){
+navLinks.forEach(link => {
+
+    const linkPage = link.getAttribute("href");
+
+    if(linkPage === currentPage){
 
         link.classList.add("active");
     }
 });
+
+
+// =========================
+// SCROLL SUAVE
+// =========================
+
+document.documentElement.style.scrollBehavior = "smooth";
