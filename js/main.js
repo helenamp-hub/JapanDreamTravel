@@ -1,4 +1,4 @@
-// MENÚ ACTIVO AUTOMÁTICO
+// MENÚ ACTIVO AUTOMÁTICO, SE EJECUTA EN TODAS LAS PÁGINAS
 
 const links = document.querySelectorAll(".nav-link");
 
