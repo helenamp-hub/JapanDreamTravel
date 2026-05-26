@@ -17,7 +17,7 @@
     --oscuro: #1c1c1c;
 }
 
-/* BODY */
+/* CUERPO */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -55,7 +55,7 @@ body {
     color: var(--rojo);
 }
 
-/* NAVBAR */
+/* MENU */
 
 .navbar {
     display: flex;
