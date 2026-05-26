@@ -472,3 +472,22 @@ select {
 
     background-color: var(--verde);
 }
+/* ERRORES */
+
+.error {
+
+    color: red;
+
+    font-size: 0.9rem;
+
+    display: block;
+
+    margin-top: 5px;
+}
+
+/* INPUT ERROR */
+
+.input-error {
+
+    border: 2px solid red;
+}
