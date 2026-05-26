@@ -1,24 +1,11 @@
-fetch("data/noticias.json")
+// MENÚ ACTIVO AUTOMÁTICO
 
-.then(response => response.json())
+const links = document.querySelectorAll(".nav-link");
 
-.then(data => {
+links.forEach(link => {
 
-    let contenedor = document.getElementById("contenedorNoticias");
+    if(link.href === window.location.href){
 
-    data.forEach(noticia => {
-
-        contenedor.innerHTML += `
-
-            <article>
-                <h3>${noticia.titulo}</h3>
-                <p>${noticia.texto}</p>
-            </article>
-
-        `;
-
-    });
-
-})
-
-.catch(error => console.log(error));
+        link.classList.add("active");
+    }
+});
