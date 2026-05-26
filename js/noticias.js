@@ -1,17 +1,31 @@
 //CARGAR NOTICIAS EXTERNAS, USAR AJAX Y LEER JSON
-[
-    {
-        "titulo": "Festival Sakura 2026",
-        "texto": "Descubre Japón durante la temporada de cerezos."
-    },
+fetch("data/noticias.json")
 
-    {
-        "titulo": "Nuevas rutas anime",
-        "texto": "Visita Akihabara y los lugares más famosos del anime."
-    },
+.then(response => response.json())
 
-    {
-        "titulo": "Viajes gastronómicos",
-        "texto": "Explora la cocina japonesa tradicional."
-    }
-]
+.then(data => {
+
+    const container = document.getElementById("news-container");
+
+    data.forEach(noticia => {
+
+        container.innerHTML += `
+
+            <div class="news-card">
+
+                <h3>${noticia.titulo}</h3>
+
+                <p>${noticia.texto}</p>
+
+            </div>
+
+        `;
+    });
+
+})
+
+.catch(error => {
+
+    console.error("Error cargando noticias:", error);
+
+});
