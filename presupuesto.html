@@ -42,6 +42,121 @@
     </header>
 
     <section class="page-title">
+        <section class="budget-section">
+
+    <form id="budget-form">
+
+        <!-- DATOS DE CONTACTO -->
+
+        <div class="form-block">
+
+            <h2>Datos de contacto</h2>
+
+            <label>Nombre</label>
+            <input type="text" id="nombre">
+
+            <label>Apellidos</label>
+            <input type="text" id="apellidos">
+
+            <label>Teléfono</label>
+            <input type="text" id="telefono">
+
+            <label>Email</label>
+            <input type="email" id="email">
+
+        </div>
+
+        <!-- PRESUPUESTO -->
+
+        <div class="form-block">
+
+            <h2>Configura tu viaje</h2>
+
+            <!-- PRODUCTO -->
+
+            <label>Destino</label>
+
+            <select id="producto">
+
+                <option value="1200">Tokyo Express - 1200€</option>
+
+                <option value="2200">Ruta Tradicional - 2200€</option>
+
+                <option value="3500">Japan Premium - 3500€</option>
+
+            </select>
+
+            <!-- PLAZO -->
+
+            <label>Días de viaje</label>
+
+            <input type="number" id="plazo" min="1" value="7">
+
+            <!-- EXTRAS -->
+
+            <div class="extras">
+
+                <label>
+                    <input type="checkbox" class="extra" value="300">
+                    JR Pass (+300€)
+                </label>
+
+                <label>
+                    <input type="checkbox" class="extra" value="200">
+                    Seguro premium (+200€)
+                </label>
+
+                <label>
+                    <input type="checkbox" class="extra" value="400">
+                    Guía privado (+400€)
+                </label>
+
+            </div>
+
+            <!-- TOTAL -->
+
+            <div class="total-box">
+
+                <h3>
+                    Presupuesto final:
+                    <span id="total">0€</span>
+                </h3>
+
+            </div>
+
+        </div>
+
+        <!-- CONDICIONES -->
+
+        <div class="conditions">
+
+            <label>
+
+                <input type="checkbox" id="condiciones">
+
+                Acepto las condiciones de privacidad
+
+            </label>
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="buttons">
+
+            <button type="submit">
+                Enviar
+            </button>
+
+            <button type="reset">
+                Resetear
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
 
         <h1>Solicita tu presupuesto</h1>
 
