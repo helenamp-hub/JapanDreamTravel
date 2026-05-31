@@ -177,6 +177,10 @@ form.addEventListener("submit", function(event){
     if(valido){
 
         alert("Formulario enviado correctamente");
+        
+        form.reset();
+
+        calcularPresupuesto();
     }
 
 });
