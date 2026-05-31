@@ -83,7 +83,10 @@ body {
 /* LINK ACTIVO */
 
 .nav-link.active {
+
     color: var(--rosa);
+
+    border-bottom: 3px solid var(--rosa);
 }
 
 /* SUBRAYADO ANIMADO */
