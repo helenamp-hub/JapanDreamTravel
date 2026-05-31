@@ -186,18 +186,6 @@ body {
     transform: scale(1.05);
 }
 
-/* FOOTER antiguo*/
-
-/*.footer {
-
-    background-color: var(--rojo);
-
-    color: white;
-
-    text-align: center;
-
-    padding: 20px;
-}
 /* SECCIONES */
 
 section {
@@ -230,7 +218,17 @@ section h2 {
 
 .destinations {
 
-    background-color: #f5f5f5;
+    background-image: url("../img/destinos-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    padding: 100px 50px;
+
+    position: relative;
 }
 
 /* CARDS */
