@@ -649,7 +649,7 @@ select {
 
 .social-icons a:hover {
 
-    color: var(--verde);
+    color: var(--rosa);
 
     transform: scale(1.2);
 }
