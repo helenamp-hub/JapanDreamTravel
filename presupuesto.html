@@ -21,211 +21,199 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 </head>
 
 <body>
+    
+        <header class="header">
 
-    <!-- HEADER -->
+            <div class="logo">
+                Japan Dream Travel
+            </div>
 
-    <header class="header">
+            <nav class="navbar">
+    
+                <a href="index.html" class="nav-link">Inicio</a>
 
-        <div class="logo">
-            Japan Dream Travel
-        </div>
+                <a href="galeria.html" class="nav-link">Galería</a>
 
-        <nav class="navbar">
+                <a href="presupuesto.html" class="nav-link">Presupuesto</a>
 
-            <a href="index.html" class="nav-link">Inicio</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
 
-            <a href="galeria.html" class="nav-link">Galería</a>
+            </nav>
 
-            <a href="presupuesto.html" class="nav-link">Presupuesto</a>
+        </header>
 
-            <a href="contacto.html" class="nav-link">Contacto</a>
+        <section class="page-title">
+            <section class="budget-section">
 
-        </nav>
+        <form id="budget-form">
 
-    </header>
+            <!-- DATOS DE CONTACTO -->
 
-    <section class="page-title">
-        <section class="budget-section">
+            <div class="form-block">
 
-    <form id="budget-form">
+                <h2>Datos de contacto</h2>
 
-        <!-- DATOS DE CONTACTO -->
+                <label>Nombre</label>
+                    <input type="text" id="nombre">
+                    <small class="error" id="error-nombre"></small>
 
-        <div class="form-block">
+                <label>Apellidos</label>
+                    <input type="text" id="apellidos">
+                    <small class="error" id="error-apellidos"></small>
 
-            <h2>Datos de contacto</h2>
+                <label>Teléfono</label>
+                    <input type="text" id="telefono">
+                    <small class="error" id="error-telefono"></small>
 
-            <label>Nombre</label>
-                <input type="text" id="nombre">
-                <small class="error" id="error-nombre"></small>
+                <label>Email</label>
+                    <input type="email" id="email">
+                    <small class="error" id="error-email"></small>
 
-            <label>Apellidos</label>
-                <input type="text" id="apellidos">
-                <small class="error" id="error-apellidos"></small>
+            </div>
 
-            <label>Teléfono</label>
-                <input type="text" id="telefono">
-                <small class="error" id="error-telefono"></small>
+            <!-- PRESUPUESTO -->
 
-            <label>Email</label>
-                <input type="email" id="email">
-                <small class="error" id="error-email"></small>
+            <div class="form-block">
 
-        </div>
+                <h2>Configura tu viaje</h2>
 
-        <!-- PRESUPUESTO -->
+                <!-- PRODUCTO -->
 
-        <div class="form-block">
+                <label>Destino</label>
 
-            <h2>Configura tu viaje</h2>
+                <select id="producto">
 
-            <!-- PRODUCTO -->
+                    <option value="1200">Tokyo Express - 1200€</option>
 
-            <label>Destino</label>
+                    <option value="2200">Ruta Tradicional - 2200€</option>
 
-            <select id="producto">
+                    <option value="3500">Japan Premium - 3500€</option>
 
-                <option value="1200">Tokyo Express - 1200€</option>
+                </select>
 
-                <option value="2200">Ruta Tradicional - 2200€</option>
+                <label>Días de viaje</label>
 
-                <option value="3500">Japan Premium - 3500€</option>
+                <input type="number" id="plazo" min="1" value="7">
 
-            </select>
+                <div class="extras">
 
-            <!-- PLAZO -->
+                    <label>
+                        <input type="checkbox" class="extra" value="300">
+                        JR Pass (+300€)
+                    </label>
 
-            <label>Días de viaje</label>
+                    <label>
+                        <input type="checkbox" class="extra" value="200">
+                        Seguro premium (+200€)
+                    </label>
 
-            <input type="number" id="plazo" min="1" value="7">
+                    <label>
+                        <input type="checkbox" class="extra" value="400">
+                        Guía privado (+400€)
+                    </label>
 
-            <!-- EXTRAS -->
+                </div>
 
-            <div class="extras">
+                <div class="total-box">
+
+                    <h3>
+                        Presupuesto final:
+                        <span id="total">0€</span>
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <div class="conditions">
 
                 <label>
-                    <input type="checkbox" class="extra" value="300">
-                    JR Pass (+300€)
-                </label>
 
-                <label>
-                    <input type="checkbox" class="extra" value="200">
-                    Seguro premium (+200€)
-                </label>
+                    <input type="checkbox" id="condiciones">
+                    <small class="error" id="error-condiciones"></small>
 
-                <label>
-                    <input type="checkbox" class="extra" value="400">
-                    Guía privado (+400€)
+                    Acepto las condiciones de privacidad
+
                 </label>
 
             </div>
 
-            <!-- TOTAL -->
+            <div class="buttons">
 
-            <div class="total-box">
+                <button type="submit">
+                    Enviar
+                </button>
 
-                <h3>
-                    Presupuesto final:
-                    <span id="total">0€</span>
-                </h3>
+                <button type="reset">
+                    Resetear
+                </button>
 
             </div>
 
-        </div>
-
-        <!-- CONDICIONES -->
-
-        <div class="conditions">
-
-            <label>
-
-                <input type="checkbox" id="condiciones">
-                <small class="error" id="error-condiciones"></small>
-
-                Acepto las condiciones de privacidad
-
-            </label>
-
-        </div>
-
-        <!-- BOTONES -->
-
-        <div class="buttons">
-
-            <button type="submit">
-                Enviar
-            </button>
-
-            <button type="reset">
-                Resetear
-            </button>
-
-        </div>
-
-    </form>
-
-</section>
-
-        <h1>Solicita tu presupuesto</h1>
+        </form>
 
     </section>
 
-    <footer class="footer">
+            <h1>Solicita tu presupuesto</h1>
 
-    <div class="footer-content">
+        </section>
 
-        <div class="footer-section">
+        <footer class="footer">
 
-            <h3>Síguenos</h3>
+        <div class="footer-content">
 
-            <div class="social-icons">
+            <div class="footer-section">
 
-                <a href="#" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+                <h3>Síguenos</h3>
 
-                <a href="#" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
+                <div class="social-icons">
 
-                <a href="#" aria-label="Youtube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-                <a href="#" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="Youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-section">
+
+                <h3>Dirección</h3>
+
+                <p>
+                    Japan Dream Travel<br>
+                    Calle Sakura 24<br>
+                    Tokio, Japón
+                </p>
+
+            </div>
+
+            <div class="footer-section">
+
+                <h3>Aviso Legal</h3>
+
+                <p>
+                    © 2026 Japan Dream Travel.<br>
+                    Todos los derechos reservados.
+                </p>
 
             </div>
 
         </div>
 
-        <div class="footer-section">
-
-            <h3>Dirección</h3>
-
-            <p>
-                Japan Dream Travel<br>
-                Calle Sakura 24<br>
-                Tokio, Japón
-            </p>
-
-        </div>
-
-        <div class="footer-section">
-
-            <h3>Aviso Legal</h3>
-
-            <p>
-                © 2026 Japan Dream Travel.<br>
-                Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 
