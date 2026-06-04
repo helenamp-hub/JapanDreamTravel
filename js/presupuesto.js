@@ -8,18 +8,9 @@ const extras = document.querySelectorAll(".extra");
 
 const total = document.getElementById("total");
 
-
-// =========================
-// CALCULAR PRESUPUESTO
-// =========================
-
 function calcularPresupuesto(){
 
-    // PRECIO BASE
-
     let precioBase = parseInt(producto.value);
-
-    // EXTRAS
 
     let extrasTotal = 0;
 
@@ -31,11 +22,8 @@ function calcularPresupuesto(){
         }
     });
 
-    // TOTAL TEMPORAL
 
     let presupuestoFinal = precioBase + extrasTotal;
-
-    // DESCUENTO POR PLAZO
 
     let dias = parseInt(plazo.value);
 
@@ -44,43 +32,26 @@ function calcularPresupuesto(){
         presupuestoFinal *= 0.90;
     }
 
-    // MOSTRAR RESULTADO
-
     total.textContent = presupuestoFinal + " €";
-}
+    }
 
+    producto.addEventListener("change", calcularPresupuesto);
 
-// =========================
-// EVENTOS
-// =========================
+    plazo.addEventListener("input", calcularPresupuesto);
 
-producto.addEventListener("change", calcularPresupuesto);
+    extras.forEach(extra => {
 
-plazo.addEventListener("input", calcularPresupuesto);
+        extra.addEventListener("change", calcularPresupuesto);
+    });
 
-extras.forEach(extra => {
-
-    extra.addEventListener("change", calcularPresupuesto);
-});
-
-
-// =========================
-// INICIAR
-// =========================
 
 calcularPresupuesto();
-
-// =========================
-// VALIDACIÓN FORMULARIO
-// =========================
 
 const form = document.getElementById("budget-form");
 
 form.addEventListener("submit", function(event){
 
     event.preventDefault();
-
-    // CAMPOS
 
     const nombre = document.getElementById("nombre");
 
@@ -92,15 +63,9 @@ form.addEventListener("submit", function(event){
 
     const condiciones = document.getElementById("condiciones");
 
-    // ERRORES
-
     let valido = true;
 
-    // LIMPIAR ERRORES
-
     limpiarErrores();
-
-    // REGEX
 
     const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]{1,15}$/;
 
@@ -109,8 +74,6 @@ form.addEventListener("submit", function(event){
     const regexTelefono = /^[0-9]{9}$/;
 
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // VALIDAR NOMBRE
 
     if(!regexNombre.test(nombre.value)){
 
@@ -123,7 +86,6 @@ form.addEventListener("submit", function(event){
         valido = false;
     }
 
-    // VALIDAR APELLIDOS
 
     if(!regexApellidos.test(apellidos.value)){
 
@@ -136,8 +98,6 @@ form.addEventListener("submit", function(event){
         valido = false;
     }
 
-    // VALIDAR TELÉFONO
-
     if(!regexTelefono.test(telefono.value)){
 
         mostrarError(
@@ -148,8 +108,6 @@ form.addEventListener("submit", function(event){
 
         valido = false;
     }
-
-    // VALIDAR EMAIL
 
     if(!regexEmail.test(email.value)){
 
@@ -162,8 +120,6 @@ form.addEventListener("submit", function(event){
         valido = false;
     }
 
-    // VALIDAR CONDICIONES
-
     if(!condiciones.checked){
 
         document.getElementById("error-condiciones").textContent =
@@ -171,8 +127,6 @@ form.addEventListener("submit", function(event){
 
         valido = false;
     }
-
-    // ENVÍO
 
     if(valido){
 
@@ -185,11 +139,6 @@ form.addEventListener("submit", function(event){
 
 });
 
-
-// =========================
-// MOSTRAR ERROR
-// =========================
-
 function mostrarError(input, errorId, mensaje){
 
     input.classList.add("input-error");
@@ -197,10 +146,6 @@ function mostrarError(input, errorId, mensaje){
     document.getElementById(errorId).textContent = mensaje;
 }
 
-
-// =========================
-// LIMPIAR ERRORES
-// =========================
 
 function limpiarErrores(){
 
