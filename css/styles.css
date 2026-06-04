@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-/* VARIABLES DE COLOR */
+/* COLORES */
 
 :root {
     --rosa: #F2A7D3;
@@ -74,8 +74,6 @@ body {
     transition: 0.3s;
 }
 
-/* EFECTO HOVER */
-
 .nav-link:hover {
     color: var(--azul);
 }
@@ -112,7 +110,7 @@ body {
     width: 100%;
 }
 
-/* HERO */
+/* */
 
 .hero {
 
@@ -132,7 +130,7 @@ body {
     padding: 20px;
 }
 
-/* HERO CONTENT */
+/**/
 
 .hero-content {
 
@@ -288,8 +286,8 @@ section h2 {
 
     border-radius: 10px;
 }
-/* GALERIA */
-/* PAGE TITLE */
+/* DENTRO DE GALERIA */
+/* TITULO DE LA PAGINA */
 
 .page-title {
 
@@ -305,9 +303,8 @@ section h2 {
     color: var(--rojo);
 }
 
-/* GALERÍA */
 
-/* GALERÍA */
+/* ORDEN DE GALERIA */
 
 .gallery {
 
@@ -536,7 +533,7 @@ select {
     margin-top: 5px;
 }
 
-/* INPUT ERROR */
+/* */
 
 .input-error {
 
@@ -585,9 +582,7 @@ select {
     overflow: hidden;
 }
 
-/* ========================= */
-/* FOOTER */
-/* ========================= */
+/* PIE DE PAGINA */
 
 .footer {
 
