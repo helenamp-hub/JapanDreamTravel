@@ -1,8 +1,4 @@
 // MAPA
-// =========================
-// CREAR MAPA
-// =========================
-
 // COORDENADAS EMPRESA
 
 const empresa = [35.6895, 139.6917];
@@ -11,10 +7,7 @@ const empresa = [35.6895, 139.6917];
 
 const map = L.map('map').setView(empresa, 10);
 
-
-// =========================
 // CAPA OPENSTREETMAP
-// =========================
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
@@ -22,10 +15,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 }).addTo(map);
 
-
-// =========================
 // MARCADOR EMPRESA
-// =========================
 
 L.marker(empresa)
 
@@ -35,10 +25,7 @@ L.marker(empresa)
 
 .openPopup();
 
-
-// =========================
 // GEOLOCALIZACIÓN CLIENTE
-// =========================
 
 if(navigator.geolocation){
 
@@ -58,9 +45,6 @@ if(navigator.geolocation){
         .addTo(map)
 
         .bindPopup("Tu ubicación");
-
-
-        // LÍNEA ENTRE CLIENTE Y EMPRESA
 
         L.polyline(
 
