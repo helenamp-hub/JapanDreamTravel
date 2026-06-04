@@ -1,9 +1,5 @@
 // GALERÍA SIMPLE
 
-// =========================
-// ELEMENTOS
-// =========================
-
 const galleryImages = document.querySelectorAll(".gallery img");
 
 const modal = document.getElementById("modal");
@@ -11,11 +7,6 @@ const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 
 const closeBtn = document.getElementById("close-btn");
-
-
-// =========================
-// ABRIR MODAL
-// =========================
 
 galleryImages.forEach(image => {
 
@@ -27,20 +18,10 @@ galleryImages.forEach(image => {
     });
 });
 
-
-// =========================
-// CERRAR MODAL
-// =========================
-
 closeBtn.addEventListener("click", () => {
 
     modal.style.display = "none";
 });
-
-
-// =========================
-// CERRAR HACIENDO CLICK FUERA
-// =========================
 
 modal.addEventListener("click", event => {
 
