@@ -1,4 +1,4 @@
-//CARGAR NOTICIAS EXTERNAS, USAR AJAX Y LEER JSON
+
 fetch("data/noticias.json")
 
 .then(response => response.json())
