@@ -14,9 +14,4 @@ navLinks.forEach(link => {
     }
 });
 
-
-// =========================
-// SCROLL SUAVE
-// =========================
-
 document.documentElement.style.scrollBehavior = "smooth";
